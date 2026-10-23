@@ -47,16 +47,12 @@
 </head>
 <body>
 
-    <div id="message-box">ここだよ？</div>
-    <button id="neta-button">どこ刺してるんだい？</button>
+    <button id="neta-button">捕まえて</button>
 
     <script>
         const button = document.getElementById('neta-button');
         const messageBox = document.getElementById('message-box');
         
-        let escapeCount = 0; // 逃げた回数を数えるカウンター
-        const maxEscapes = 8; // 逃げる回数
-
         // マウスが近づいた（乗った）ときの動き
         button.addEventListener('mouseover', () => {
             if (escapeCount < maxEscapes) {
