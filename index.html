@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>絶対に押せないボタン！？</title>
+    <title>押してみて♡</title>
     <style>
         body {
             margin: 0;
@@ -53,8 +53,8 @@
 </head>
 <body>
 
-    <div id="message-box">このボタンを押せるかな？</div>
-    <button id="neta-button">押してみろ！</button>
+    <div id="message-box"></div>
+    <button id="neta-button">押して</button>
 
     <script>
         const button = document.getElementById('neta-button');
@@ -81,13 +81,12 @@
                 button.style.transform = 'none';
 
                 // メッセージの更新
-                messageBox.innerText = `あ、逃げた！ (${escapeCount}回目)`;
+                messageBox.innerText = `逃げた！ (${escapeCount}回目)`;
                 
                 if (escapeCount === maxEscapes) {
                     button.innerText = "うわぁぁ参りました…押していいよ";
                     button.style.backgroundColor = "#2ed573";
                     button.style.boxShadow = "0 5px 15px rgba(46, 213, 115, 0.4)";
-                    messageBox.innerText = "ボタンは諦めたようだ！";
                 }
             }
         }
@@ -105,18 +104,18 @@
                 button.innerText = "ロックオン完了";
                 
                 let secondsLeft = 5;
-                messageBox.innerText = `捕まえたな！5秒後に異世界へ転送します (${secondsLeft})`;
+                messageBox.innerText = `byebye (${secondsLeft})`;
 
                 const countdown = setInterval(() => {
                     secondsLeft--;
                     if (secondsLeft > 0) {
-                        messageBox.innerText = `捕まえたな！5秒後に異世界へ転送します (${secondsLeft})`;
+                        messageBox.innerText = `byebye (${secondsLeft})`;
                     } else {
                         clearInterval(countdown);
-                        messageBox.innerText = "いってらっしゃい！";
+                        messageBox.innerText = "^ ^";
                         
                         // 行き先のURL（好きなURLに変えてね）
-                        window.location.href = "https://google.com";
+                        window.location.href = "https://www.youtube.com/watch?v=BBJa32lCaaY";
                     }
                 }, 1000);
             }
